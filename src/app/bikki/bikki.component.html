@@ -1,0 +1,18 @@
+<h2>Bikki List</h2>
+<ul>
+    <li *ngFor = "let each of bikkilist" (click) = "onClickFav(each)">
+        <span>Item Barcode: {{each.item_barcode}}--</span>
+        <span>Item Name: {{each.item_name}}--</span>
+        <span>Item Cost: {{each.item_cost}}</span>
+    </li>
+</ul>
+
+<div>
+    <h3><span>My Fav Bikki is {{favbikki.item_name}}</span></h3>
+</div>
+
+<div>
+    <h4>Edit my favbikki name</h4>
+    <input [(ngModel)]="favbikki.item_name" placeholder="name">
+</div>
+
